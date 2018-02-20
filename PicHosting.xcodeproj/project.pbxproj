@@ -11,6 +11,8 @@
 		F7EE077A203CD8EC00376644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE0779203CD8EC00376644 /* ViewController.swift */; };
 		F7EE077C203CD8EC00376644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EE077B203CD8EC00376644 /* Assets.xcassets */; };
 		F7EE077F203CD8EC00376644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7EE077D203CD8EC00376644 /* Main.storyboard */; };
+		F7EE0788203CD98D00376644 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F7EE0787203CD98D00376644 /* LICENSE */; };
+		F7EE078A203CD99100376644 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F7EE0789203CD99100376644 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		F7EE077E203CD8EC00376644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7EE0780203CD8EC00376644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7EE0781203CD8EC00376644 /* PicHosting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicHosting.entitlements; sourceTree = "<group>"; };
+		F7EE0787203CD98D00376644 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		F7EE0789203CD99100376644 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				F7EE077B203CD8EC00376644 /* Assets.xcassets */,
 				F7EE077D203CD8EC00376644 /* Main.storyboard */,
 				F7EE0780203CD8EC00376644 /* Info.plist */,
+				F7EE0787203CD98D00376644 /* LICENSE */,
+				F7EE0789203CD99100376644 /* README.md */,
 				F7EE0781203CD8EC00376644 /* PicHosting.entitlements */,
 			);
 			path = PicHosting;
@@ -122,7 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7EE0788203CD98D00376644 /* LICENSE in Resources */,
 				F7EE077C203CD8EC00376644 /* Assets.xcassets in Resources */,
+				F7EE078A203CD99100376644 /* README.md in Resources */,
 				F7EE077F203CD8EC00376644 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
