@@ -14,13 +14,38 @@ import RxCocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    fileprivate let pasteboardObserver = PasteboardObserver()
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate var enable: Variable<Bool> = Variable(true)
+    fileprivate var changeCount: Disposable?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
         registerHotKeys()
         initApp()
 
+        enable.asObservable()
+            .bind { (e) in
+                if e {
+                    NSPasteboard.general.rx.cachedCount
+                        .asObservable()
+                        .subscribe({ (v) in
+                            debugPrint("vv --> \(v)")
+                        })
+                        .disposed(by: self.disposeBag)
+                    self.changeCount = NSPasteboard.general.rx.changeCount
+                } else {
+                    debugPrint("set -> no")
+                    self.changeCount?.dispose()
+                    self.changeCount = nil
+                }
+        }.disposed(by: disposeBag)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.enable.value = false
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6, execute: {
+            self.enable.value = true
+        })
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -34,6 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 extension AppDelegate {
 
     func initApp()  {
+
 //        switch AppCache.shared.appConfig.linkType {
 //        case .markdown:
 //            MarkdownItem.state = NSControl.StateValue.off // .init(1)
@@ -41,8 +67,12 @@ extension AppDelegate {
 //        case .url:
 //            MarkdownItem.state = NSControl.StateValue.on
 //        }
-        pasteboardObserver.addSubscriber(self)
-        pasteboardObserver.startObserving()
+
+//        let a = NSPasteboard.general.rx.observe(KVORepresentable.Protocol, <#T##keyPath: String##String#>) .changeCount
+//        a.asObservable().subscribe(onNext: { debugPrint($0)}, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+
+        //pasteboardObserver.addSubscriber(self)
+        //pasteboardObserver.startObserving()
 
 //        if AppCache.shared.appConfig.autoUp {
 //            pasteboardObserver.startObserving()
@@ -117,12 +147,6 @@ extension AppDelegate {
             return 33
             /// Check that hkCom in indeed your hotkey ID and handle it.
         }, 1, &eventType, nil, nil)
-    }
-}
-
-extension AppDelegate: PasteboardObserverSubscriber {
-    func pasteboardChanged(_ pasteboard: NSPasteboard) {
-        debugPrint("paste board changed")
     }
 }
 

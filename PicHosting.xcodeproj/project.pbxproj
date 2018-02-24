@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73C6159BEAA425806961CDD0 /* Pods_PicHosting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD4EBF84B5C25BABF1F6D58 /* Pods_PicHosting.framework */; };
-		F7A3EE14203CDCDF00582194 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3EE13203CDCDF00582194 /* PasteboardObserver.swift */; };
+		F7A3EE14203CDCDF00582194 /* NSPasteboard+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3EE13203CDCDF00582194 /* NSPasteboard+rx.swift */; };
 		F7EE0778203CD8EC00376644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE0777203CD8EC00376644 /* AppDelegate.swift */; };
 		F7EE077C203CD8EC00376644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EE077B203CD8EC00376644 /* Assets.xcassets */; };
 		F7EE077F203CD8EC00376644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7EE077D203CD8EC00376644 /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 		0897ED92DD3ECDC226AFDA4D /* Pods-PicHosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicHosting.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicHosting/Pods-PicHosting.release.xcconfig"; sourceTree = "<group>"; };
 		1DD4EBF84B5C25BABF1F6D58 /* Pods_PicHosting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicHosting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		598517556F614C750DA6030C /* Pods-PicHosting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicHosting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicHosting/Pods-PicHosting.debug.xcconfig"; sourceTree = "<group>"; };
-		F7A3EE13203CDCDF00582194 /* PasteboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardObserver.swift; sourceTree = "<group>"; };
+		F7A3EE13203CDCDF00582194 /* NSPasteboard+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+rx.swift"; sourceTree = "<group>"; };
 		F7EE0774203CD8EC00376644 /* PicHosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicHosting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EE0777203CD8EC00376644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7EE077B203CD8EC00376644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				F7EE0787203CD98D00376644 /* LICENSE */,
 				F7EE0789203CD99100376644 /* README.md */,
 				F7EE0781203CD8EC00376644 /* PicHosting.entitlements */,
-				F7A3EE13203CDCDF00582194 /* PasteboardObserver.swift */,
+				F7A3EE13203CDCDF00582194 /* NSPasteboard+rx.swift */,
 			);
 			path = PicHosting;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A3EE14203CDCDF00582194 /* PasteboardObserver.swift in Sources */,
+				F7A3EE14203CDCDF00582194 /* NSPasteboard+rx.swift in Sources */,
 				F7EE0778203CD8EC00376644 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
